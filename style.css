@@ -1,0 +1,21 @@
+:root {
+  --headerHeight: 50px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  background-color: #21252B;
+  width: 100%;
+  height: var(--headerHeight);
+}
+
+#fileTree {
+  height: calc(100% - var(--headerHeight));
+  width: 250px;
+  background-color: #21252B;
+}
