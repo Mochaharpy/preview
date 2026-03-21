@@ -4,7 +4,7 @@
   --sidebarWidth: 250px;
   --bg-dark: #21252B;
   --bg-darker: #181A1F;
-  --border-color: #333;
+  --border-color: #464A50;
 }
 
 * {
@@ -15,17 +15,20 @@ body {
   margin: 0;
   height: 100dvh;
   width: 100%;
+  color: #eee;
   display: grid;
-  grid-template-rows: var(--headerHeight) 1fr var(--consoleHeight);
-  grid-template-columns: var(--sidebarWidth) 1fr 1fr;
+  grid-template-rows: var(--headerHeight) 1fr  var(--consoleHeight);
+  grid-template-columns: var(--sidebarWidth)  1fr  1fr;
   grid-template-areas: 
-    "header header header"
-    "sidebar editor preview"
+    "header  header  header"
+    "sidebar editor  preview"
     "sidebar console preview";
   background-color: var(--bg-darker);
-  color: white;
-  font-family: sans-serif;
   overflow: hidden;
+}
+
+body.is-resizing iframe {
+    pointer-events: none !important;
 }
 
 header {
