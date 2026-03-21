@@ -11,6 +11,13 @@
   box-sizing: border-box;
 }
 
+.span {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  white-space: pre;
+}
+
 body {
   margin: 0;
   height: 100dvh;

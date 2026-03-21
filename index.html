@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Previewer</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
 </head>
+
 <body>
   <header id="toolBar"></header>
   <div id="fileTree">
@@ -14,9 +17,16 @@
   <div id="monaco-anchor"></div>
   <div id="console"></div>
   <div id="preview-area">
-    <div id="address-bar"></div>
+    <div id="address-bar">
+      <button onclick="reloadPreview()">reload</button>
+      <span class="span">/root/ </span>
+      <form onsubmit="previewFile(this); return false;">
+        <input name="path" type="text" placeholder="put the file here">
+      </form>
+    </div>
     <iframe id="previewer"></iframe>
   </div>
   <script src="js/main.js"></script>
 </body>
+
 </html>
