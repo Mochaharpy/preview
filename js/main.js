@@ -31,7 +31,7 @@ function previewFile(formData) {
   const data = new FormData(formData);
 
   const preview = document.getElementById("previewer");
-  preview.src = "./preview/preview-project/" + data.get("path")
+  preview.src = "./preview-project/" + data.get("path")
 }
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register("../serviceworker.js", { scope: '/' })
