@@ -13,6 +13,7 @@ require(['vs/editor/editor.main'], function () {
 });
 
 function updateFile(path, content, action = 'UPDATE_FILE') {
+    console.log('updating file: '+path, "with: " + content)
   navigator.serviceWorker.controller.postMessage({
     type: action,
     payload: {
