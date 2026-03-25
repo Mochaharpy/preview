@@ -56,6 +56,7 @@ self.addEventListener("fetch", event => {
       };
 
       const contentType = mimeMap[ext] || 'application/octet-stream';
+      console.log(contentType, content)
      return event.respondWith(new Response(content, { headers: { 'Content-Type': contentType } }));
     } else {
       console.log("no file at: ", path)
