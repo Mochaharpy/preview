@@ -35,4 +35,7 @@ function previewFile(formData) {
   preview.src = "./preview-project/" + data.get("path")
 }
 
-if ('serviceWorker' in navigator) navigator.serviceWorker.register("../serviceworker.js", { scope: '/' })
+if ('serviceWorker' in navigator) {
+    console.log("ran")
+    navigator.serviceWorker.register("../serviceworker.js", { scope: './' })
+}
